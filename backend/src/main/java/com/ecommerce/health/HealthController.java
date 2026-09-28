@@ -1,0 +1,1 @@
+package com.ecommerce.health; import org.springframework.web.bind.annotation.*; import java.time.Instant; import java.util.*; @RestController @RequestMapping("/api/v1") public class HealthController{@GetMapping("/health") Map<String,Object> health(){return Map.of("status","UP","service","multi-vendor-ecommerce","timestamp",Instant.now().toString());}}

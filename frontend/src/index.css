@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Bazaar palette: a marketplace of many stalls, not one accent on cream. */
+  --color-ink: #171a2c;
+  --color-ink-soft: #363a5c;
+  --color-paper: #faf9f4;
+  --color-paper-dim: #f0eee2;
+  --color-line: #ddd8c4;
+
+  --color-marigold: #d98f1e;
+  --color-marigold-dark: #a86a10;
+  --color-marigold-light: #f7e4bd;
+
+  --color-teal: #1f6f63;
+  --color-teal-dark: #164f46;
+  --color-teal-light: #d7ebe6;
+
+  --color-berry: #a83c46;
+  --color-berry-dark: #7d2831;
+  --color-berry-light: #f3dade;
+
+  --color-plum: #5b4b8a;
+  --color-plum-dark: #423468;
+  --color-plum-light: #e6e0f5;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* A perforated / receipt-style divider used on cart & order pages */
+.tear-rule {
+  border: none;
+  border-top: 1px dashed var(--color-line);
+}
+
+/* Visible keyboard focus ring, kept consistent everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-marigold-dark);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

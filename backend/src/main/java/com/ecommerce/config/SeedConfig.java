@@ -1,0 +1,2 @@
+package com.ecommerce.config; import com.ecommerce.product.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.Bean; import org.springframework.context.annotation.Configuration;
+@Configuration public class SeedConfig { @Bean CommandLineRunner seed(CategoryRepository cats){return args->{if(cats.count()==0){Category e=new Category();e.setName("Electronics");cats.save(e);Category f=new Category();f.setName("Fashion");cats.save(f);Category h=new Category();h.setName("Home");cats.save(h);}};} }

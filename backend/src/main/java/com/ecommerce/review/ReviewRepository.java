@@ -1,0 +1,1 @@
+package com.ecommerce.review; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ReviewRepository extends JpaRepository<Review,UUID>{boolean existsByProductIdAndUserId(UUID p,UUID u); List<Review> findByProductId(UUID id);}

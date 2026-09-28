@@ -1,0 +1,1 @@
+package com.ecommerce.seller; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface SellerRepository extends JpaRepository<SellerProfile,UUID>{Optional<SellerProfile> findByUserId(UUID id);}

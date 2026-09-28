@@ -1,0 +1,2 @@
+package com.ecommerce.inventory; import org.springframework.data.jpa.repository.*; import org.springframework.data.repository.query.Param; import jakarta.persistence.LockModeType; import java.util.*;
+public interface InventoryRepository extends JpaRepository<Inventory,UUID>{ @Lock(LockModeType.PESSIMISTIC_WRITE) @Query("select i from Inventory i where i.product.id=:productId") Optional<Inventory> findForUpdate(@Param("productId") UUID productId); Optional<Inventory> findByProductId(UUID id); }
